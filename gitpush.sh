@@ -11,6 +11,6 @@ workspace=$(cd "$(dirname "$0")"; pwd)
 echo "workspace is "$workspace
 
 cd $workspace
-    git push origin $1:refs/for/$1
+    git push -u origian $1
 cd -
 echo "done.............."%
