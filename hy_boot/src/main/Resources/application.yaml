@@ -1,0 +1,24 @@
+#端口设置
+server:
+  port: 8012
+#redis cluster， 按照这种格式 StringRedisTemplate自动加载配置， jedisCluster需要配置
+spring:
+  redis:
+    cluster:
+      nodes:
+        - 127.0.0.1:7000
+        - 127.0.0.1:7001
+        - 127.0.0.1:7002
+        - 127.0.0.1:7003
+        - 127.0.0.1:7004
+        - 127.0.0.1:7005
+
+#singal redis, 按照这种格式 StringRedisTemplate自动加载配置
+#spring:
+#  redis:
+#    host: 127.0.0.1
+#    port: 8400
+
+
+
+
