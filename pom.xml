@@ -17,9 +17,13 @@
 
     <!--多模块，在此处配置-->
     <modules>
-        <module>./hy_boot</module>
-        <module>./hy_webapi</module>
+        <module>hy_boot</module>
+        <module>hy_webapi</module>
         <module>hy_zk</module>
+        <module>hy_concurrent</module>
+        <module>hy_thrift</module>
+        <module>hy_core</module>
+        <module>hy_repository</module>
     </modules>
     <!-- Add typical dependencies for a web application -->
     <dependencies>
@@ -103,6 +107,38 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
         </dependency>
+
+        <!--zookeeper-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-zookeeper-dependencies</artifactId>-->
+            <!--<version>1.1.0.RELEASE</version>-->
+            <!--<type>pom</type>-->
+            <!--<scope>import</scope>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-zookeeper-all</artifactId>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-commons</artifactId>-->
+            <!--<version>1.1.8.RELEASE</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.32</version>
+        </dependency>
     </dependencies>
 
     <!-- Package as an executable JAR -->
@@ -112,6 +148,23 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <!--需要设置mainclass-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix></classpathPrefix>
+                            <mainClass>com.mounthuang.test.BootStrap</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
