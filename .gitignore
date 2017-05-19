@@ -6,4 +6,4 @@ hy_thrift/hy_thrift.iml
 hy_core/hy_core.iml
 hy_concurrent/hy_concurrent.iml
 hy_boot/hy_boot.iml
-/
+hy_repository/hy_repository.iml
