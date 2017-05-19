@@ -1,1 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea
+hy_zk/hy_zk.iml
+hy_webapi/hy_webapi.iml
+hy_thrift/hy_thrift.iml
+hy_core/hy_core.iml
+hy_concurrent/hy_concurrent.iml
+hy_boot/hy_boot.iml
+/
