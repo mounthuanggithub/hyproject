@@ -14,7 +14,7 @@ public class DataStruct {
     Map<String, String> testMap;
 
     public void init() {
-        System.out.println("enter init");
+        System.out.println("enter init method");
     }
 
     public Map<String, String> getTestMap() {
