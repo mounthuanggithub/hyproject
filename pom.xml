@@ -24,6 +24,7 @@
         <module>hy_thrift</module>
         <module>hy_core</module>
         <module>hy_repository</module>
+        <module>hy_utils</module>
     </modules>
     <!-- Add typical dependencies for a web application -->
     <dependencies>
