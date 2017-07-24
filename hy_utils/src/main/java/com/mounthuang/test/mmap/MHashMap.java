@@ -158,7 +158,6 @@ public class MHashMap<K, V> implements MMap<K, V> {
 
     public MHashMap(MMap<? extends K, ? extends V> m) {
         this.loadFactor = DAFAULT_LOAD_FACTOR;
-        //putMapEntries(m, false);
     }
 
     public int size() {

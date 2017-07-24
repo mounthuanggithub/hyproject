@@ -5,8 +5,12 @@ package com.mounthuang.test.mconmap;
  * Data: 2017/6/20.
  */
 
+import org.jboss.netty.util.internal.ConcurrentHashMap;
+
 /**
- *  ConcurrentHashMap和Hashtable主要区别就是围绕着锁的粒度以及如何锁,可以简单理解成把一个大的HashTable分解成多个，形成了锁分离
+ * 锁分离(锁分段)
+ * HashTable 锁整个hash表，ConcurrentHashMap->多个HashTable
  */
 public class MCHashMapSimple {
+    ConcurrentHashMap<String, String> cmap = new ConcurrentHashMap<>();
 }
